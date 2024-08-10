@@ -1,0 +1,22 @@
+"""
+Lookup CMS page by ID
+"""
+
+
+type page {
+  cmsPageId: Int
+  uuid: String!
+  url_key: String!
+  name: String!
+  content: String
+  metaTitle: String
+  metaKeywords: String
+  metaDescription: String
+}
+
+
+extend type Query {
+  cmsHomePage: [page]
+}
+
+

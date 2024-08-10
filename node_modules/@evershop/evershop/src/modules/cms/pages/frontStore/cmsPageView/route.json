@@ -1,0 +1,4 @@
+{
+  "methods": ["GET"],
+  "path": "/journal/:url_key"
+}

@@ -1,0 +1,43 @@
+{
+    "shop" : {
+        "currency": "INR",
+        "language": "en",
+        "weightUnit": "kg"
+    },   
+    "catalog": {
+        "product": {
+            "image": {
+                "thumbnail": {
+                    "width": 500,
+                    "height": 500
+                },
+                "listing": {
+                    "width": 1080,
+                    "height": 720
+                },
+                "single": {
+                    "width": 1980,
+                    "height": 1080
+                }
+            }
+        },
+        "showOutOfStockProduct": true
+    },
+    "system": {
+        "theme": "eve",
+        "extensions": [
+            {
+                "name": "productComment",
+                "resolve": "extensions/productComment",
+                "enabled": false,
+                "priority": 10 
+            },
+            {
+                "name": "staticPages",
+                "resolve": "extensions/staticPages",
+                "enabled": true,
+                "priority": 10
+            }
+        ]
+    }
+}

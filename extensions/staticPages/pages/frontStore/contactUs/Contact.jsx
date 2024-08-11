@@ -4,11 +4,11 @@ import {
   FaPhoneSquareAlt,
   FaFacebookF,
   FaTwitter,
-  FaYoutube,
   FaInstagram,
+  FaMedium,
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
-import "./Contact.scss";
+import "./Contact.css";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -46,141 +46,142 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact section">
-      <h2 className="section__title">
-        Get In
-        <span>Touch</span>
-      </h2>
+      <section className="contact section">
+        <h2 className="section__title">
+          Get In
+          <span>Touch</span>
+        </h2>
 
-      <div className="contact__container container grid">
-        <div className="contact__data">
-          <h3 className="contact__title">Don't be Shy !</h3>
-          <p className="contact__description">
-            Feel free to get in touch with us. We are always open to discuss new
-            projects, creative ideas, or opportunities to be part of your
-            visions.
-          </p>
+        <div className="contact__container container grid">
+          <div className="contact__data">
+            <h3 className="contact__title">Don't be Shy !</h3>
+            <p className="contact__description">
+              Feel free to get in touch with us. We are always open to discuss new
+              projects, creative ideas, or opportunities to be part of your
+              visions.
+            </p>
 
-          <div className="contact__info">
-            <div className="info__item">
-              <FaEnvelopeOpen className="info__icon" />
-              <div>
-                <span className="info__title">Mail Us</span>
-                <h4 className="info__desc">gauravrai2783@gmail.com</h4>
+            <div className="contact__info">
+              <div className="info__item">
+                <FaEnvelopeOpen className="info__icon" />
+                <div>
+                  <span className="info__title">Mail Us</span>
+                  <h4 className="info__desc">gauravrai2783@gmail.com</h4>
+                </div>
+              </div>
+
+              <div className="info__item">
+                <FaPhoneSquareAlt className="info__icon" />
+                <div>
+                  <span className="info__title">Call Us</span>
+                  <h4 className="info__desc">+917991732058</h4>
+                </div>
               </div>
             </div>
 
-            <div className="info__item">
-              <FaPhoneSquareAlt className="info__icon" />
-              <div>
-                <span className="info__title">Call Us</span>
-                <h4 className="info__desc">+917991732058</h4>
+            <div className="contact__socials">
+              <a
+                  href="https://www.instagram.com/rug.harbor/?igsh=eGlpcHNzNjV3anNs&utm_source=qr"
+                  className="contact__social-link"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                  href="https://twitter.com"
+                  className="contact__social-link"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                  href="https://medium.com/"
+                  className="contact__social-link"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <FaMedium />
+              </a>
+              <a
+                  href="https://facebook.com"
+                  className="contact__social-link"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <FaFacebookF />
+              </a>
+            </div>
+          </div>
+
+          <form className="contact__form" onSubmit={handleSubmit}>
+            <div className="form__input-group">
+              <div className="form__input-div">
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    name="name"
+                    className="form__control"
+                    required
+                />
+              </div>
+              <div className="form__input-div">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    className="form__control"
+                    required
+                />
+              </div>
+              <div className="form__input-div">
+                <input
+                    type="text"
+                    placeholder="Your Subject"
+                    name="subject"
+                    className="form__control"
+                    required
+                />
               </div>
             </div>
-          </div>
 
-          <div className="contact__socials">
-            <a
-              href="https://www.instagram.com/rug.harbor/?igsh=eGlpcHNzNjV3anNs&utm_source=qr"
-              className="contact__social-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://twitter.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://youtube.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="https://facebook.com"
-              className="contact__social-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaFacebookF />
-            </a>
-          </div>
-        </div>
-
-        <form className="contact__form" onSubmit={handleSubmit}>
-          <div className="form__input-group">
             <div className="form__input-div">
-              <input
-                type="text"
-                placeholder="Your Name"
-                name="name"
-                className="form__control"
-                required
-              />
-            </div>
-            <div className="form__input-div">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                className="form__control"
-                required
-              />
-            </div>
-            <div className="form__input-div">
-              <input
-                type="text"
-                placeholder="Your Subject"
-                name="subject"
-                className="form__control"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="form__input-div">
             <textarea
-              placeholder="Your Message"
-              name="message"
-              className="form__control textarea"
-              required
+                placeholder="Your Message"
+                name="message"
+                className="form__control textarea"
+                required
             ></textarea>
-          </div>
-          <button type="submit" className="button">
-            Send Message
-            <span className="button__icon contact__button-icon">
+            </div>
+            <button type="submit" className="button">
+              Send Message
+              <span className="button__icon contact__button-icon">
               <FiSend />
             </span>
-          </button>
-        </form>
-      </div>
-
-      {isSubmitted && !error && (
-        <div className="message-box">
-          <p>Message Sent Successfully!</p>
+            </button>
+          </form>
         </div>
-      )}
 
-      {error && (
-        <div className="message-box">
-          <p>Oops! Something went wrong. Please try again.</p>
-        </div>
-      )}
-    </section>
+        {isSubmitted && !error && (
+            <div className="message-box">
+              <p>Message Sent Successfully!</p>
+            </div>
+        )}
+
+        {error && (
+            <div className="message-box">
+              <p>Oops! Something went wrong. Please try again.</p>
+            </div>
+        )}
+      </section>
   );
 };
 
+export default Contact;
 export const layout = {
   areaId: 'content',
   sortOrder: 1
 };
 
-export default Contact;
+// export default Contact;

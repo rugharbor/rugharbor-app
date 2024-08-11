@@ -1,0 +1,61 @@
+.text-with-icons {
+  background-color: rgba(48, 35, 84, 0);
+  color: #755a51;
+  padding: 20px;
+  text-align: center;
+}
+
+.text-with-icons__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-item {
+  width: 200px;
+  margin: 20px 10px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.icon-item img.icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-item h3 {
+  font-size: 1.5em;
+  color: #755a51;
+  margin: 10px 0 5px 0;
+}
+
+.icon-item p {
+  font-size: 1em;
+  color: #755a51;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .icon-item {
+    width: 45%; 
+    margin: 20px auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .icon-item {
+    width: 100%;
+    margin: 20px 0;
+  }
+}

@@ -14,7 +14,7 @@ function Logo() {
 
             <a href="/">
 
-                <img src="https://www.rugharbor.com/rugharbor-logo.ico" alt="RugHarbor"
+                <img src="/rugharbor-logo.ico" alt="RugHarbor"
                      className="navbar4-image1"
                      width='61.6px' height='53.2px'/>
 

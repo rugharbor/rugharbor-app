@@ -6,7 +6,7 @@
   /* *-*-*-*--*-*-Colors*--*-**-*--**-*- */
   /* Colors mode HSL(hue,saturation,lightness */
   /* --first-color: hsl(271, 76%, 53%); */
-  --first-color: hsl(17, 4%, 66%);
+  --first-color: hsl(50, 98%, 45%);
   --title-color: hsl(0, 0%, 0%); /* Black */
   --text-color: hsl(0, 0%, 0%); /* Black */
   --body-color: hsl(0, 0%, 100%);
@@ -14,7 +14,7 @@
   --border-color: hsl(0, 0%, 87%);
   --text-white: #fff;
 
-  /* *-*-*-*--*Font and Typography*-*-*-*-*-* */
+
   --body-font: "Open Sans", sans-serif;
   --second-font: "Poppins", sans-serif;
 
@@ -28,7 +28,7 @@
   --smaller-font-size: 14px;
   --tiny-font-size: 12px;
 
-  /* *-*-*-*--*Font Weight*-*-*-*-*-* */
+
   --weight-400: 400;
   --weight-500: 500;
   --weight-600: 600;
@@ -36,7 +36,7 @@
   --weight-800: 800;
 }
 
-/* Responsive typography */
+
 @media screen and (max-width: 1200px) {
   :root {
     --big-font-size: 36px;
@@ -51,7 +51,7 @@
   }
 }
 
-/**-*-*-*-*-*-*-*-*-**- BASE *-*-*-*-*-*-*-*-*-*-* */
+
 * {
   margin: 0;
   padding: 0;
@@ -68,14 +68,14 @@ textarea {
 
 body {
   background-color: var(--body-color);
-  color: var(--text-color); /* Black */
+  color: var(--text-color);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: var(--title-color); /* Black */
+  color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--weight-700);
 }
@@ -130,55 +130,60 @@ section {
 }
 
 .button {
-  display: inline-block;
-  color: #000000; /* Black */
-  border: 1px solid #000000; /* Black */
-  padding: 15px 70px 15px 35px;
-  border-radius: 35px;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var (--weight-500);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.25s ease-in-out;
+  display: inline-block !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  padding: 15px 70px 15px 35px !important;
+  border-radius: 35px !important;
+  font-family: var(--second-font) !important;
+  font-size: var(--small-font-size) !important;
+  font-weight: var(--weight-500) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease-in-out !important;
 }
 
 .button:hover {
-  color: var(--text-white);
-  background-color: #000000; /* Black */
+  color: var(--text-white) !important;
+  background-color: #000000 !important;
 }
 
 .button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #000000; /* Black */
-  transform: translateX(100%);
-  z-index: -1;
-  transition: all 0.3s ease-out;
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-color: #000000 !important;
+  transform: translateX(100%) !important;
+  z-index: -1 !important;
+  transition: all 0.3s ease-out !important;
 }
 
 .button:hover::before {
-  transform: translateX(0);
+  transform: translateX(0) !important;
 }
 
 .button__icon {
-  background-color: #000000; /* Black */
-  position: absolute;
-  inset-block: -2px;
-  right: 0;
-  width: 55px;
-  border-radius: 50%;
-  color: var(--text-white);
-  font-size: var(--large-font-size);
-  text-align: center;
-  line-height: 60px;
+  background-color: #000000 !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50% !important;
+  color: var(--text-white) !important;
+  font-size: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  margin-right: -2px !important;
+  margin-top: -2px !important;
 }
 
 /**-*-*-*-*-*-*-*-*-**- CONTACT CSS *-*-*-*-*-*-*-*-*-*-* */
 .contact__container {
-  grid-template-columns: 1fr; /* Ensures single column layout by default */
-  background-color: #ffffff; /* White background */
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
   display: grid;
   gap: 30px;
 }
@@ -187,13 +192,13 @@ section {
   font-size: var(--h3-font-size);
   font-weight: var(--weight-600);
   margin-bottom: 1rem;
-  color: #000000; /* Black font */
+  color: #000000;
 }
 
 .contact__description {
   font-size: var(--small-font-size);
   line-height: 1.6;
-  color: #000000; /* Black font */
+  color: #000000;
 }
 
 .contact__description,
@@ -208,50 +213,53 @@ section {
 }
 
 .contact__info .info__icon {
-  color: #000000; /* Black icon */
+  color: #000000;
   font-size: var(--h2-font-size);
 }
 
 .contact__info .info__title {
   font-size: var(--small-font-size);
-  color: #000000; /* Black font */
+  color: #000000;
 }
 
 .contact__info .info__desc {
   font-family: var(--body-font);
   font-size: var(--small-font-size);
   font-weight: var(--weight-500);
-  color: #000000; /* Black font */
+  color: #000000;
 }
 
 .contact__socials {
   display: flex;
-  justify-content: space-between; /* Distributes space between items */
+  justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap; /* Allows wrapping to avoid overflow */
+  flex-wrap: wrap;
 }
 
 .contact__social-link {
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black icon */
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 44px;
-  transition: all 0.3s ease;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  line-height: 40px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .contact__social-link:hover {
-  background-color: #000000; /* Black background on hover */
-  color: #ffffff; /* White font on hover */
+  background-color: #000000 !important;
+  color: var(--text-white) !important;
 }
 
 .form__input-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 30px;
-  width: 100%; /* Ensures the form doesn't overflow */
+  width: 100%;
 }
 
 .form__input-div {
@@ -260,8 +268,8 @@ section {
 
 .form__control {
   border: 1px solid #e0e0e0;
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black font */
+  background-color: #ffffff;
+  color: #000000;
   width: 100%;
   padding: 12px 24px;
   border-radius: 30px;
@@ -270,7 +278,7 @@ section {
 }
 
 .form__control:focus {
-  border-color: #000000; /* Black border on focus */
+  border-color: #000000;
 }
 
 .textarea {
@@ -283,7 +291,7 @@ section {
   line-height: 64px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .contact__container {
     grid-template-columns: 1fr;

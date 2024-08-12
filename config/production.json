@@ -1,9 +1,9 @@
 {
-    "shop" : {
+    "shop": {
         "currency": "INR",
         "language": "en",
         "weightUnit": "kg"
-    },   
+    },
     "catalog": {
         "product": {
             "image": {
@@ -27,16 +27,22 @@
         "theme": "eve",
         "extensions": [
             {
-                "name": "productComment",
-                "resolve": "extensions/productComment",
-                "enabled": false,
-                "priority": 10 
-            },
-            {
                 "name": "staticPages",
                 "resolve": "extensions/staticPages",
                 "enabled": true,
-                "priority": 10
+                "priority": 5
+            },
+            {
+                "name": "catalogs",
+                "resolve": "extensions/catalog",
+                "enabled": true,
+                "priority": 5
+            },
+            {
+                "name": "cmsPageview",
+                "resolve": "extensions/cms",
+                "enabled": true,
+                "priority": 5
             }
         ]
     }

@@ -21,7 +21,7 @@ const FooterMenu = () => {
               <a href="/careers">Careers</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/contact-us">Contact</a>
             </li>
           </ul>
         </div>
@@ -32,10 +32,10 @@ const FooterMenu = () => {
               <a href="/support">Customer Support</a>
             </li>
             <li>
-              <a href="/faq">FAQs</a>
+              <a href="/sitemap.xml">Sitemap</a>
             </li>
             <li>
-              <a href="/shipping">Shipping & Returns</a>
+              <a href="/Privacy-Policy-for-RugHarbor-TermsFeed.html">Privacy Policy</a>
             </li>
             <li>
               <a href="/terms">Terms & Conditions</a>
@@ -49,10 +49,10 @@ const FooterMenu = () => {
               <a href="/consultation">Consultation</a>
             </li>
             <li>
-              <a href="/custom">Custom Rugs</a>
+              <a href="/contact-us">Custom Rugs</a>
             </li>
             <li>
-              <a href="/trade">Trade Program</a>
+              <a href="/contact-us">Trade Program</a>
             </li>
             <li>
               <a href="/care">Care & Maintenance</a>
@@ -64,45 +64,43 @@ const FooterMenu = () => {
           <ul className="social-icons">
             <li>
               <a
-                href="https://www.instagram.com/rug.harbor/"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://www.instagram.com/rug.harbor/"
+                  target="_blank"
+                  rel="noopener noreferrer"
               >
-                <FaInstagram />
+                <FaInstagram/>
               </a>
             </li>
             <li>
               <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
               >
-                <FaFacebookF />
+                <FaFacebookF/>
               </a>
             </li>
             <li>
               <a
-                href="https://medium.com/@rugharbor"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://medium.com/@rugharbor"
+                  target="_blank"
+                  rel="noopener noreferrer"
               >
-                <FaMediumM />
+                <FaMediumM/>
               </a>
             </li>
             <li>
               <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
               >
-                <FaTwitter />
+                <FaTwitter/>
               </a>
             </li>
+
           </ul>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <p>©{currentYear} rugharbor.com | All Rights Reserved</p>
       </div>
     </footer>
   );

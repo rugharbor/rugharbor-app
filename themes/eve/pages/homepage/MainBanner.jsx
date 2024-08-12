@@ -10,7 +10,7 @@ function MainBanner() {
                     <p>Discover the Latest Trends and Elevate Your Living Space Today</p>
                     <p></p>
                     <a className="button button-primary" href="/Tufted" >
-                        SHOW NOW
+                        SHOP NOW
                     </a>
                 </div>
                 <div>

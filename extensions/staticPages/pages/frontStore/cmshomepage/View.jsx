@@ -1,6 +1,8 @@
 /* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
+import Structured_data from "@components/frontStore/structuredData/StructuredDataJournal";
+
 
 export default function Page({pages}) {
     console.log(pages);
@@ -9,6 +11,7 @@ export default function Page({pages}) {
             {
                 pages.map((p) => (
                     <div key={p.uuid}>
+                        <Structured_data p={p}/>
                         <div className="page-width">
                             <a href={p.url_key}>
                                 <h1 className="text-center mb-3">{p.name}</h1>
@@ -27,6 +30,8 @@ Page.propTypes = {
             {
                 url_key: PropTypes.string.isRequired,
                 name: PropTypes.string.isRequired,
+                updated_at: PropTypes.string.isRequired,
+                created_at: PropTypes.string.isRequired,
                 uuid: PropTypes.string.isRequired
             }
         )
@@ -50,6 +55,8 @@ query Query { pages: cmsHomePage {
 name
 url_key
 uuid
+created_at
+ updated_at
 }
 }
 `;

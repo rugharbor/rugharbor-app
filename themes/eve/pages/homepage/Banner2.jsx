@@ -10,7 +10,7 @@ function MainBanner() {
                     <p></p>
                     <p></p>
                     <a className="button button-primary" href="#" >
-                        SHOW NOW
+                        SHOP NOW
                     </a>
                 </div>
                 <div>

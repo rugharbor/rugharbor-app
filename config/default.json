@@ -31,6 +31,18 @@
         "resolve": "extensions/staticPages",
         "enabled": true,
         "priority": 5
+      },
+      {
+        "name": "catalogs",
+        "resolve": "extensions/catalog",
+        "enabled": true,
+        "priority": 5
+      },
+      {
+        "name": "cmsPageview",
+        "resolve": "extensions/cms",
+        "enabled": true,
+        "priority": 5
       }
     ]
   }

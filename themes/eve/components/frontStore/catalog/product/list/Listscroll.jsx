@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {_} from '@evershop/evershop/src/lib/locale/translate';
+// import {Structured_data} from @components/frontStore/catalog/product/list/StructuredData
 
 
 import "swiper/css";
@@ -11,6 +12,11 @@ import {FreeMode, Pagination, EffectFade, EffectCoverflow} from "swiper/modules"
 
 import {RxArrowTopRight} from "react-icons/rx";
 import {Swiper, SwiperSlide} from "swiper/react";
+import Structured_data from "@components/frontStore/structuredData/StructuredDataProduct";
+import './List.scss'
+// import {Helmet} from "react-helmet";
+
+
 
 
 export default function ProductList({products = [], countPerRow = 6}) {
@@ -25,106 +31,6 @@ export default function ProductList({products = [], countPerRow = 6}) {
     }
     return (
         <>
-            <style jsx>{`
-                .product-list {
-                    padding: 10px;
-                    background: #f9f9f9;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 100vh;
-                }
-
-                .product-card {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    background: #fff;
-                    border: 1px solid #e0e0e0;
-                    border-radius: 12px;
-                    padding: 0;
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                    transition: transform 0.3s, box-shadow 0.3s;
-                    max-width: 100%;
-                    cursor: pointer;
-                    text-decoration: none;
-                    color: inherit;
-                }
-
-                .product-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-                }
-
-                .product-image {
-                    width: 100%;
-                    height: 300px;
-                    overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-bottom: 1px solid #e0e0e0;
-                }
-
-                .product-image img {
-                    width: 200%;
-                    height: 200%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .product-info {
-                    padding: 8px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .product-name {
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin: 8px 0;
-                    text-align: center;
-                    color: #333;
-                }
-
-                .product-price {
-                    font-size: 16px;
-                    color: #d32f2f;
-                    margin-bottom: 8px;
-                    text-align: center;
-                    font-weight: 500;
-                }
-
-                @media (max-width: 768px) {
-                    .product-card {
-                        padding: 0;
-                    }
-
-                    .product-name {
-                        font-size: 16px;
-                    }
-
-                    .product-price {
-                        font-size: 14px;
-                    }
-                }
-
-                @media (max-width: 480px) {
-                    .product-card {
-                        padding: 0;
-                    }
-
-                    .product-name {
-                        font-size: 14px;
-                    }
-
-                    .product-price {
-                        font-size: 12px;
-                    }
-                }
-            `}</style>
 
             <Swiper
                 breakpoints={{
@@ -147,7 +53,12 @@ export default function ProductList({products = [], countPerRow = 6}) {
 
             >
                 {products.map((p) => (
+
+
                     <SwiperSlide key={p.name}>
+                        <Structured_data p={p}>
+
+                        </Structured_data>
                         <a
                             href={p.url}
                             className="product-card"
@@ -181,6 +92,7 @@ ProductList.propTypes = {
             sku: PropTypes.string,
             productId: PropTypes.number,
             url: PropTypes.string,
+            description: PropTypes.string,
             price: PropTypes.shape({
                 regular: PropTypes.shape({
                     value: PropTypes.number,

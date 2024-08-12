@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { get } from '@evershop/evershop/src/lib/util/get';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
+import Structured_data from "@components/frontStore/structuredData/StructuredDataProduct";
+// import Structured_data from "../../../structuredData/StructuredData";
+import './List.scss'
 
 export default function ProductList({ products = [], countPerRow = 4 }) {
   console.log('Product List Data:', products); // Log the products array
@@ -28,93 +31,7 @@ export default function ProductList({ products = [], countPerRow = 4 }) {
 
   return (
     <>
-      <style jsx>{`
-        .product-list {
-          padding: 10px;
-          background: #f9f9f9;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-        }
-        .product-card {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-          background: #fff;
-          border: 1px solid #e0e0e0;
-          border-radius: 12px;
-          padding: 0;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s, box-shadow 0.3s;
-          max-width: 100%;
-          cursor: pointer;
-          text-decoration: none;
-          color: inherit;
-        }
-        .product-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        }
-        .product-image {
-          width: 100%;
-          height: 300px;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-bottom: 1px solid #e0e0e0;
-        }
-        .product-image img {
-          width: 200%;
-          height: 200%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .product-info {
-          padding: 16px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .product-name {
-          font-size: 18px;
-          font-weight: 600;
-          margin: 8px 0;
-          text-align: center;
-          color: #333;
-        }
-        .product-price {
-          font-size: 16px;
-          color: #d32f2f;
-          margin-bottom: 8px;
-          text-align: center;
-          font-weight: 500;
-        }
-        @media (max-width: 768px) {
-          .product-card {
-            padding: 0;
-          }
-          .product-name {
-            font-size: 16px;
-          }
-          .product-price {
-            font-size: 14px;
-          }
-        }
-        @media (max-width: 480px) {
-          .product-card {
-            padding: 0;
-          }
-          .product-name {
-            font-size: 14px;
-          }
-          .product-price {
-            font-size: 12px;
-          }
-        }
-      `}</style>
+
       <div className={getClassName(countPerRow)}>
         {products.map((p) => {
           const defaultImageUrl = get(p, 'image.url');
@@ -125,6 +42,8 @@ export default function ProductList({ products = [], countPerRow = 4 }) {
               className="product-card"
               key={p.productId}
             >
+                <Structured_data p={p}></Structured_data>
+
               <div className="product-image">
                 <img src={defaultImageUrl} alt={p.name} />
               </div>
@@ -151,11 +70,11 @@ ProductList.propTypes = {
         regular: PropTypes.shape({
           value: PropTypes.number,
           text: PropTypes.string
-        }),
-        special: PropTypes.shape({
-          value: PropTypes.number,
-          text: PropTypes.string
         })
+        // ,special: PropTypes.shape({
+        //   value: PropTypes.number,
+        //   text: PropTypes.string
+        // })
       }),
       image: PropTypes.shape({
         alt: PropTypes.string,

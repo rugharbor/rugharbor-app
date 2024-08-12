@@ -8,6 +8,8 @@ type page {
   uuid: String!
   url_key: String!
   name: String!
+  created_at: String!
+  updated_at: String!
   content: String
   metaTitle: String
   metaKeywords: String

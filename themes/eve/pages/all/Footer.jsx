@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+const currentYear = new Date().getFullYear();
+
 function Footer({ themeConfig: { copyRight } }) {
+
   return (
     <div className="footer__default">
       <div className="page-width grid grid-cols-1 md:grid-cols-2 gap-2 justify-between">
@@ -105,7 +109,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   themeConfig: {
-    copyRight: '© 2024 Rugharbor. All Rights Reserved.'
+    copyRight: `© ${currentYear} Rugharbor. All Rights Reserved.`
   }
 };
 
